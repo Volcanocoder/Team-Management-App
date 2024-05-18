@@ -150,11 +150,11 @@ class _ResetPassState extends State<ResetPass> {
                         "Enter an email address associated with your account.",
                         style: TextStyle(fontSize: 14),
                       ),
-                      SizedBox(height: 30),
+                      const SizedBox(height: 30),
                       ElevatedButton(
                         onPressed: _resetPassword,
                         style: ElevatedButton.styleFrom(
-                          primary: Colors.black,
+                          // primary: Colors.black,
                           shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(30),
                           ),

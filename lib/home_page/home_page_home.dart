@@ -23,34 +23,36 @@ class _HomeNavState extends State<HomeNav> {
     double buttonHeight = MediaQuery.of(context).size.height;
     double buttonWidth = MediaQuery.of(context).size.width;
 
-    return Scaffold(
-      appBar: const MyAppBar(),
-      body: Column(
-        children: [
-          Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: SizedBox(
-              width: buttonWidth,
-              height: buttonHeight*0.075,
-              child: CupertinoSegmentedControl<int>(
-                children: const {
-                  0: Text('To-Do List'),
-                  1: Text('Teams'),
-                },
-                onValueChanged: (index) {
-                  _onNavItemTapped(index);
-                },
-                groupValue: _selectedIndex,
-                // borderColor: Theme.of(context).primaryColor,
-                selectedColor: const Color.fromARGB(255, 101, 56, 108),
-                unselectedColor: Colors.white,
+    return SafeArea(
+      child: Scaffold(
+        appBar: const MyAppBar(),
+        body: Column(
+          children: [
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: SizedBox(
+                width: buttonWidth,
+                height: buttonHeight*0.075,
+                child: CupertinoSegmentedControl<int>(
+                  children: const {
+                    0: Text('To-Do List'),
+                    1: Text('Teams'),
+                  },
+                  onValueChanged: (index) {
+                    _onNavItemTapped(index);
+                  },
+                  groupValue: _selectedIndex,
+                  // borderColor: Theme.of(context).primaryColor,
+                  selectedColor: const Color.fromARGB(255, 101, 56, 108),
+                  unselectedColor: Colors.white,
+                ),
               ),
             ),
-          ),
-          Expanded(
-            child: _pages[_selectedIndex],
-          ),
-        ],
+            Expanded(
+              child: _pages[_selectedIndex],
+            ),
+          ],
+        ),
       ),
     );
   }

@@ -13,6 +13,8 @@ import 'create&join-Team/create-team.dart';
 import 'home_page/bottomnavbar.dart';
 import 'package:brl_task4/screens/forgot%20password/forgot_pass.dart';
 import 'package:brl_task4/leave approval/leave.dart';
+
+import 'home_page/home_page_home.dart';
 void main() async{
   WidgetsFlutterBinding.ensureInitialized();
   dynamic storedValue = await secureStorage.readSecureData(key);
@@ -36,7 +38,7 @@ class MyApp extends StatelessWidget {
 
         initialRoute: '/',
         routes: {
-          '/':(context)=>const SignUp(),
+          '/':(context)=>const HomeNav(),
 
           // '/': (context) => (storedValue==null)?SignUp():BottomNavBar(),
         MyRoutes.SignUpRoutes: (context) => const SignUp(),

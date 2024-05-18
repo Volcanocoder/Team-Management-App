@@ -55,7 +55,7 @@ class _MyAppBarState extends State<MyAppBar> {
           colors: const [Colors.black, Colors.purple],
         ),
       ),
-      padding: EdgeInsets.all(16.0),
+      padding: EdgeInsets.all(10.0),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
@@ -69,7 +69,7 @@ class _MyAppBarState extends State<MyAppBar> {
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  SizedBox(height: 20),
+                  SizedBox(height: 10),
                   Text(
                     'Hello!',
                     style: TextStyle(
